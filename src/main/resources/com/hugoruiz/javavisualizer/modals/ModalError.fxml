@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="container" alignment="CENTER" prefHeight="248.0" prefWidth="388.0" spacing="10" style="-fx-padding: 20; -fx-background-color: #3d3d3d;" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hugoruiz.javavisualizer.modals.ModalErrorController">
+   <ImageView fitHeight="48.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../img/error.png" />
+      </image>
+   </ImageView>
+    <Label fx:id="errorLabel" alignment="CENTER" prefHeight="73.0" prefWidth="212.0" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font></Label>
+   <Label fx:id="descriptionLabel" alignment="CENTER" prefHeight="57.0" prefWidth="274.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+</VBox>

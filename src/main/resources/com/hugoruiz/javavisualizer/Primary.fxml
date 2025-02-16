@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentAnchorPane" style="-fx-background-color: #1F1F1F;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hugoruiz.javavisualizer.PrimaryController">
+   <children>
+      <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints minWidth="10.0" percentWidth="70.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="3.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" percentHeight="75.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane fx:id="stackPane" style="-fx-background-color: #1F1F1F;" GridPane.rowIndex="1">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </StackPane>
+            <TextArea id="code-result" fx:id="executionResult" editable="false" style="-fx-background-color: #1F1F1F;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </TextArea>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="80.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox prefWidth="300.0" spacing="3.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#startRunning" prefWidth="86.0" styleClass="primary-button" text="Run" />
+                        <HBox fx:id="loadingContainer" alignment="CENTER" prefHeight="25.0" prefWidth="113.0">
+                           <children>
+                              <Label fx:id="loadingLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="58.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField id="step-field" fx:id="stepField" alignment="CENTER" disable="true" prefWidth="80.0" text="0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label fx:id="stepsLabel" prefHeight="25.0" prefWidth="74.0" text="of 0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <TextArea id="terminal" fx:id="terminal" editable="false" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <HBox spacing="3.0" GridPane.columnIndex="1">
+               <children>
+                  <Button fx:id="prevBtn" disable="true" mnemonicParsing="false" onAction="#prev" prefWidth="70.0" styleClass="primary-button" text="Prev" />
+                  <Button fx:id="nextBtn" disable="true" mnemonicParsing="false" onAction="#next" prefWidth="70.0" styleClass="primary-button" text="Next" />
+                  <Button fx:id="playBtn" disable="true" mnemonicParsing="false" onAction="#play" prefWidth="70.0" styleClass="primary-button" text="Play" />
+                  <Button fx:id="createGifBtn" disable="true" mnemonicParsing="false" onAction="#generateGifVisualization" prefWidth="75.0" styleClass="primary-button" text="Create GIF" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

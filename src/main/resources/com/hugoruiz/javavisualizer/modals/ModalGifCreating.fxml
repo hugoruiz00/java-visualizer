@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="187.0" prefWidth="314.0" spacing="10" style="-fx-padding: 20; -fx-background-color: #3d3d3d;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.hugoruiz.javavisualizer.modals.ModalGifCreatingController">
+    <Label fx:id="messageLabel" text="Default message" textFill="#ebebeb">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font></Label>
+</VBox>

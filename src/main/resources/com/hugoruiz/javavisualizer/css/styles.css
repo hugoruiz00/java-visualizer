@@ -1,0 +1,21 @@
+#code-result,
+#step-field,
+#terminal {
+	-fx-control-inner-background: #242424;
+	-fx-font-family: Consolas;
+	-fx-highlight-fill: #827e7e;
+	-fx-highlight-text-fill: #000000;
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 16;
+}
+
+.primary-button {
+	-fx-background-color: #740DCF;
+	-fx-text-fill: white;
+	-fx-cursor: hand;
+}
+
+.primary-button:hover {
+	-fx-background-color: #9434e7;
+}
+
